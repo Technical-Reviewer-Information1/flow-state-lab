@@ -1,0 +1,34 @@
+.qhead{display:flex; justify-content:space-between; align-items:center; margin-bottom:12px}
+.choice4{display:grid; gap:8px; grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+.choice4 .btn{text-align:left; line-height:1.65; padding:11px 13px}
+.choice4 .btn.correct{background:var(--ok-bg); border-color:var(--ok); color:var(--ok)}
+.choice4 .btn.wrong{background:var(--ng-bg); border-color:var(--ng); color:var(--ng)}
+.choice4.locked{pointer-events:none}
+input[type=range]{width:100%; accent-color:var(--accent); height:34px}
+
+/* --- フローチャート --- */
+svg .fc-box{fill:#fff;stroke:var(--ink-3);stroke-width:1}
+svg .fc-box.on{fill:#fff3c4;stroke:#8a5a00;stroke-width:2}
+svg .fc-box.past{fill:#f2f4f7}
+svg .fc-t{font:400 12px/1.4 var(--sans);fill:var(--ink)}
+svg .fc-t.b{font-weight:700}
+svg .fc-lab{font:400 10.5px var(--mono);fill:var(--muted)}
+svg .fc-line{fill:none;stroke:var(--ink-3);stroke-width:1}
+svg .fc-line.on{stroke:#8a5a00;stroke-width:2}
+.svgwrap{overflow-x:auto;border:1px solid var(--rule);border-radius:3px;background:var(--paper-2);padding:10px}
+.svgwrap svg{display:block;margin:0 auto}
+
+/* --- 状態遷移図 --- */
+svg .st-c{fill:#fff;stroke:var(--ink-3);stroke-width:1}
+svg .st-c.now{fill:#e8eef7;stroke:var(--accent);stroke-width:2.5}
+svg .st-t{font:700 12.5px var(--sans);fill:var(--ink);text-anchor:middle}
+svg .st-e{fill:none;stroke:var(--ink-3);stroke-width:1;marker-end:url(#ar)}
+svg .st-e.fire{stroke:var(--accent);stroke-width:2.5}
+svg .st-el{font:400 11px var(--sans);fill:var(--muted);text-anchor:middle}
+svg .st-el.fire{fill:var(--accent);font-weight:700}
+.clockbox{font:700 2rem/1.2 var(--mono);color:var(--accent);text-align:center;padding:6px 0}
+.evlog{max-height:190px;overflow:auto;border:1px solid var(--rule);border-radius:3px;background:#fff}
+.evlog div{padding:5px 10px;border-bottom:1px solid var(--line);font:.84rem/1.5 var(--mono)}
+.evlog div:last-child{border-bottom:0}
+table.strans td.pick{background:#e8eef7}
+table.strans .sel{width:100%;min-height:36px;font-size:.85rem}
